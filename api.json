@@ -1,0 +1,13 @@
+{
+    "1":{
+        "nom":"KONE",
+        "prenom":"kevin",
+        "fonction":"Ingenieur"
+        },
+    "2":{
+        "nom":"KOUAKOU",
+        "prenom":"Ulrich",
+        "age":26,
+        "fonction":"Developper"
+    }
+}
