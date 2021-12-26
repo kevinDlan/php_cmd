@@ -19,11 +19,27 @@
     <?php
     // outputs the username that owns the running php/httpd process
     // (on a system with the "whoami" executable in the path)
-    $output = null;
-    $retval = null;
-    exec('git status', $output, $retval);
-    echo "Returned with status $retval and output:\n";
-    print_r($output);
+    // $output = null;
+    // $retval = null;
+    $checkUpdate = [];
+    $checkUpdateStatus = null;
+    exec('git remote update',$checkUpdate,$checkUpdateStatus,);
+    if(count($checkUpdate) > 1 )
+    {
+        exec('git status -uno',$checkPullRequest,$checkPullStatus);
+        // if($checkPullRequest[$i] === "")
+        // {
+        //     exec('git pull', $output, $retval);
+        //     // echo "Returned with status $retval and output:\n";
+        //     echo "Status: $checkUpdateStatus";
+            print_r($checkPullRequest);
+        // }
+
+    }else
+    {
+        echo "<h3>Nothing to update</h3>";
+    }
+
     ?>
 
 
